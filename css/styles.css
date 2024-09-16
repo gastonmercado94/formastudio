@@ -64,25 +64,35 @@
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    align-items: center;
     margin: 0 10vw;
 }
 
 .card{
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: flex-start;
+    align-items: center;
     width: 20vw;
-    height: 60vh;
-    padding: 0 20px;
+    height: auto;
+    padding: 2rem 1.5rem;
+    transition: all 0.5s;
+}
+
+.card:hover{
+    background-color: #65b6b5;
+    color: white;
+    border-radius: 1rem ;
+}
+
+.card:hover > h3{
+    color: white;
 }
 
 .icon{
     background-color: #65b6b5;
     height: 8rem;
     width: 8rem;
-    border-radius: 50%;
+    border-radius: 1rem;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -99,6 +109,7 @@
     padding: 30px 0;
     text-align: center;
     font-weight: 400;
+    transition: all 0.5s;
 }
 
 .card p{
@@ -127,17 +138,25 @@
     align-items: center;
     width: 20vw;
     border-left: 2px solid #8bc5c5;
+
 }
+
+.highlights_card:hover > h3 ,.highlights_card:hover > p{
+    color: #81fffd;
+}
+
 
 .highlights_card h3{
     font-size: 3.5rem;
     font-weight: 500;
     color: white;
+    transition: all 0.5s;
 }
 
 .highlights_card p{
     padding-top: 20px;
-    font-size: 1.25rem;
+    font-size: 1.1rem;
+    transition: all 0.4s;
 }
 
 .highlights_card1{
@@ -159,7 +178,7 @@
     margin-right: 3vw;
     background-image: url(../assets/woman_modelling.jpg);
     background-size: cover;
-    background-position: bottom;
+    background-position: bottom right;
 }
 
 .main1_content{
@@ -286,9 +305,9 @@ footer{
 }
 
 
-/* RESPOSIVE TABLET 768PX */
+/* RESPOSIVE TABLET 1024PX */
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 1024px){
 
 *{
     font-size: 14px;
@@ -300,11 +319,12 @@ footer{
     grid-template-columns: 40vw 40vw;
     grid-template-rows: 30rem 30rem;
     grid-template-areas: "c1 c2" "c3 c4";
-    margin-bottom: 0;
+    margin-bottom: 5rem;
 }
 .card{
     width: 40vw;
-    padding: 0 20px;
+    height: 30rem;
+    padding-bottom: 5rem;
 }
 
 .card h3{
@@ -358,8 +378,9 @@ footer{
 
 .main1_img{
     width: 80vw;
-    height: 80vh;
+    height: 55rem;
     margin-right: 0vw;
+    background-size: cover;
     background-position: bottom;
     margin-bottom: 3vh;
 }
@@ -381,7 +402,7 @@ footer{
 .main2_img{
     order: -1;
     width: 80vw;
-    height: 50vh;
+    height: 30rem;
     margin-left: 0vw;
     margin-bottom: 3vh;
 }
@@ -389,6 +410,13 @@ footer{
 .main2_content{
     width: 80vw;
     margin-right: 0vw;
+}
+
+.main1_content h2, .main2_content h2{
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: #2C8988;
+    padding: 0.8rem 0;
 }
 
 /* FOOTER */
@@ -411,7 +439,7 @@ footer{
 }
 
 .footer2, .footer1, .footer3{
-    height: 22vh;
+    height: 15rem;
     width: 35vw;
     display: flex;
     flex-direction: column;
@@ -462,7 +490,7 @@ footer{
         
         width: 90vw;
         height: auto;
-        margin-bottom: 7rem;
+        margin-bottom: 3rem;
     }
     
     .card h3{
